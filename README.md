@@ -1,5 +1,9 @@
 # Concrete Mathematics - Classic Problems
 
+**Author:** Shahriar Alom  
+**Email:** shahriaralomshakil@gmail.com  
+**Repository:** https://github.com/ShahriarAlomShakil/ConcreteMathematics
+
 This repository contains C++ implementations of three classic problems from discrete mathematics and computer science. Each problem is solved using both recursive and iterative approaches.
 
 ## Problems Included
