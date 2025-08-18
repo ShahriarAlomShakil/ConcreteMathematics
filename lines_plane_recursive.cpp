@@ -3,7 +3,7 @@ using namespace std;
 
 long long linesInPlane(int n)
 {
-    if (n <= 1)
+    if (n == 0)
         return 1;
     return linesInPlane(n - 1) + n;
 }
