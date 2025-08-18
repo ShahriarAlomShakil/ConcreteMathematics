@@ -23,8 +23,6 @@ The Tower of Hanoi is a classic puzzle consisting of three rods and n disks of d
 - A larger disk cannot be placed on top of a smaller disk
 
 ### Files
-- `tower_hanoi_recursive.cpp` - Recursive solution with move counting
-- `tower_hanoi_iterative.cpp` - Iterative solution using stack with move counting
 - `tower_hanoi_count_recursive.cpp` - Recursive solution that only counts total moves
 - `tower_hanoi_count_iterative.cpp` - Iterative solution that only counts total moves
 
@@ -51,7 +49,7 @@ Uses a stack to simulate the recursive calls. Each stack element contains the mo
 #### Count-Only Versions
 **Files:** `tower_hanoi_count_recursive.cpp` and `tower_hanoi_count_iterative.cpp`
 
-These versions only calculate the total number of moves without displaying each step:
+These versions calculate the total number of moves without displaying each step:
 - **Recursive Count:** Uses recurrence T(n) = 2T(n-1) + 1
 - **Iterative Count:** Uses loop with formula: result = result * 2 + 1
 - **Efficiency:** Much faster execution for large n values
@@ -62,8 +60,7 @@ These versions only calculate the total number of moves without displaying each 
 - **Recursive Case:** Decompose into three steps
 - **Total Moves:** 2^n - 1
 - **Mathematical Formula:** T(n) = 2^n - 1
-- **Move Tracking:** Both main versions number each move and show total count
-- **Optimization:** Count-only versions available for efficiency
+- **Optimization:** Count-only versions for efficiency
 
 ---
 
@@ -144,8 +141,6 @@ Start with 1 region (no lines), then for each additional line, add the number of
 
 ### Compile individual files:
 ```bash
-g++ -o tower_recursive tower_hanoi_recursive.cpp
-g++ -o tower_iterative tower_hanoi_iterative.cpp
 g++ -o tower_count_recursive tower_hanoi_count_recursive.cpp
 g++ -o tower_count_iterative tower_hanoi_count_iterative.cpp
 g++ -o josephus_recursive josephus_recursive.cpp
@@ -156,8 +151,6 @@ g++ -o lines_iterative lines_plane_iterative.cpp
 
 ### Run examples:
 ```bash
-./tower_recursive
-./tower_iterative
 ./tower_count_recursive
 ./tower_count_iterative
 ./josephus_recursive
@@ -170,11 +163,9 @@ g++ -o lines_iterative lines_plane_iterative.cpp
 
 ## File Variants Summary
 
-### Tower of Hanoi (4 files)
-1. **`tower_hanoi_recursive.cpp`** - Shows each move with numbering and total count
-2. **`tower_hanoi_iterative.cpp`** - Shows each move with numbering and total count
-3. **`tower_hanoi_count_recursive.cpp`** - Only calculates and shows total moves
-4. **`tower_hanoi_count_iterative.cpp`** - Only calculates and shows total moves
+### Tower of Hanoi (2 files)
+1. **`tower_hanoi_count_recursive.cpp`** - Only calculates and shows total moves
+2. **`tower_hanoi_count_iterative.cpp`** - Only calculates and shows total moves
 
 ### Josephus Problem (2 files) 
 1. **`josephus_recursive.cpp`** - Classic problem with k=2 (skip 1 person)
