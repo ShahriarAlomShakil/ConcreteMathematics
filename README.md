@@ -28,39 +28,31 @@ The Tower of Hanoi is a classic puzzle consisting of three rods and n disks of d
 
 ### Algorithm Analysis
 
-#### Recursive Approach
-**Time Complexity:** O(2^n)
+#### Recursive Count Approach
+**Time Complexity:** O(n)
 **Space Complexity:** O(n) - due to recursion stack
 
 **Logic:**
-1. Move n-1 disks from source to auxiliary rod
-2. Move the largest disk from source to destination
-3. Move n-1 disks from auxiliary to destination rod
+Uses the mathematical recurrence relation to calculate total moves directly without simulating the actual moves.
 
 **Recurrence Relation:** T(n) = 2T(n-1) + 1, T(1) = 1
 
-#### Iterative Approach
-**Time Complexity:** O(2^n)
-**Space Complexity:** O(2^n) - explicit stack usage
+#### Iterative Count Approach
+**Time Complexity:** O(n)
+**Space Complexity:** O(1)
 
 **Logic:**
-Uses a stack to simulate the recursive calls. Each stack element contains the move parameters and a flag indicating whether it's an actual move or needs further decomposition.
+Uses a loop to build up the result iteratively using the formula: result = result * 2 + 1 for each disk.
 
-#### Count-Only Versions
-**Files:** `tower_hanoi_count_recursive.cpp` and `tower_hanoi_count_iterative.cpp`
-
-These versions calculate the total number of moves without displaying each step:
-- **Recursive Count:** Uses recurrence T(n) = 2T(n-1) + 1
-- **Iterative Count:** Uses loop with formula: result = result * 2 + 1
-- **Efficiency:** Much faster execution for large n values
-- **Output:** Only shows the final count
+**Mathematical Formula:** T(n) = 2^n - 1
 
 ### Key Exam Points
-- **Base Case:** When n=1, directly move the disk
-- **Recursive Case:** Decompose into three steps
-- **Total Moves:** 2^n - 1
-- **Mathematical Formula:** T(n) = 2^n - 1
-- **Optimization:** Count-only versions for efficiency
+- **Base Case:** T(1) = 1 (one disk requires one move)
+- **Recurrence Relation:** T(n) = 2T(n-1) + 1
+- **Closed Form:** T(n) = 2^n - 1
+- **Efficiency:** Count-only approach is O(n) instead of O(2^n)
+- **Pattern:** 1, 3, 7, 15, 31, 63, ... (each term is 2^n - 1)
+- **Mathematical Insight:** Focus on the formula rather than simulation
 
 ---
 
